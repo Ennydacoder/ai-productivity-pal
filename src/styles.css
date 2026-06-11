@@ -142,3 +142,63 @@
     color: var(--color-foreground);
   }
 }
+
+/* KenWork AI — Rainbow theme utilities */
+@utility bg-rainbow {
+  background-image: linear-gradient(
+    90deg,
+    #ef4444 0%,
+    #f97316 16%,
+    #eab308 33%,
+    #22c55e 50%,
+    #06b6d4 66%,
+    #6366f1 83%,
+    #a855f7 100%
+  );
+  background-size: 200% 200%;
+  animation: rainbow-shift 8s ease infinite;
+}
+
+@utility text-rainbow {
+  background-image: linear-gradient(
+    90deg,
+    #ef4444,
+    #f97316,
+    #eab308,
+    #22c55e,
+    #06b6d4,
+    #6366f1,
+    #a855f7
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-shift 8s ease infinite;
+}
+
+@utility bg-rainbow-soft {
+  background-image: linear-gradient(
+    90deg,
+    #fee2e2,
+    #ffedd5,
+    #fef9c3,
+    #dcfce7,
+    #cffafe,
+    #e0e7ff,
+    #f3e8ff
+  );
+}
+
+@utility bg-rainbow-bg {
+  background:
+    radial-gradient(at 10% 0%, #fee2e2 0px, transparent 50%),
+    radial-gradient(at 90% 0%, #e0e7ff 0px, transparent 50%),
+    radial-gradient(at 50% 100%, #dcfce7 0px, transparent 50%),
+    #fafafa;
+}
+
+@keyframes rainbow-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}

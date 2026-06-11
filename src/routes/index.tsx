@@ -4,13 +4,13 @@ import { Sparkles, Mail, FileText, ListChecks, ShieldCheck, ArrowRight } from "l
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AI Productivity Assistant for the Modern Workplace" },
+      { title: "AI KenWork AI for the Modern Workplace" },
       {
         name: "description",
         content:
           "Draft professional emails, summarize meeting notes, and plan your day with an AI assistant built for workplace productivity.",
       },
-      { property: "og:title", content: "AI Productivity Assistant" },
+      { property: "og:title", content: "AI KenWork AI" },
       {
         property: "og:description",
         content: "Email drafting, meeting summaries, and smart task planning — powered by AI.",
@@ -22,12 +22,12 @@ export const Route = createFileRoute("/")({
 
 function Landing() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-rainbow-bg text-slate-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 font-semibold">
-            <Sparkles className="h-5 w-5 text-blue-700" />
-            Productivity Assistant
+            <Sparkles className="h-5 w-5 text-rainbow" />
+            KenWork AI
           </div>
           <nav className="flex items-center gap-3">
             <Link
@@ -38,7 +38,7 @@ function Landing() {
             </Link>
             <Link
               to="/auth"
-              className="text-sm bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-md font-medium"
+              className="text-sm bg-rainbow text-white shadow-md hover:opacity-90 transition px-4 py-2 rounded-md font-medium"
             >
               Get started
             </Link>
@@ -48,7 +48,7 @@ function Landing() {
 
       <main>
         <section className="max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
-          <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+          <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-rainbow bg-rainbow-soft px-3 py-1 rounded-full">
             AI for the modern workplace
           </div>
           <h1 className="mt-6 text-5xl md:text-6xl font-bold tracking-tight text-slate-900 max-w-3xl mx-auto">
@@ -61,7 +61,7 @@ function Landing() {
           <div className="mt-8 flex items-center justify-center gap-3">
             <Link
               to="/auth"
-              className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-md font-medium"
+              className="inline-flex items-center gap-2 bg-rainbow text-white shadow-md hover:opacity-90 transition px-6 py-3 rounded-md font-medium"
             >
               Try it free <ArrowRight className="h-4 w-4" />
             </Link>
@@ -96,7 +96,7 @@ function Landing() {
               key={f.title}
               className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-sm transition"
             >
-              <div className="h-10 w-10 rounded-md bg-blue-50 text-blue-700 flex items-center justify-center">
+              <div className="h-10 w-10 rounded-md bg-rainbow-soft text-rainbow flex items-center justify-center">
                 <f.icon className="h-5 w-5" />
               </div>
               <h3 className="mt-4 font-semibold text-slate-900">{f.title}</h3>
@@ -107,7 +107,7 @@ function Landing() {
 
         <section className="border-t border-slate-200 bg-white">
           <div className="max-w-6xl mx-auto px-6 py-12 flex items-start gap-4">
-            <ShieldCheck className="h-6 w-6 text-blue-700 mt-1" />
+            <ShieldCheck className="h-6 w-6 text-rainbow mt-1" />
             <div>
               <h2 className="font-semibold text-slate-900">Responsible AI by design</h2>
               <p className="text-sm text-slate-600 mt-1 max-w-2xl">
@@ -119,9 +119,9 @@ function Landing() {
         </section>
       </main>
 
-      <footer className="border-t border-slate-200 bg-slate-50">
+      <footer className="border-t border-slate-200 bg-rainbow-bg">
         <div className="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-500 flex justify-between">
-          <span>© {new Date().getFullYear()} Productivity Assistant</span>
+          <span>© {new Date().getFullYear()} KenWork AI</span>
           <span>AI-powered • Built for ASA 6</span>
         </div>
       </footer>
