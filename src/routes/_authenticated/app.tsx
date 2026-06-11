@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/app")({
-  head: () => ({ meta: [{ title: "Dashboard — Productivity Assistant" }] }),
+  head: () => ({ meta: [{ title: "Dashboard — KenWork AI" }] }),
   component: Dashboard,
 });
 
@@ -61,12 +61,12 @@ function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-rainbow-bg text-slate-900">
       <header className="border-b border-slate-200 bg-white sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <Link to="/app" className="flex items-center gap-2 font-semibold">
-            <Sparkles className="h-5 w-5 text-blue-700" />
-            Productivity Assistant
+            <Sparkles className="h-5 w-5 text-rainbow" />
+            KenWork AI
           </Link>
           <Button variant="ghost" size="sm" onClick={signOut} className="text-slate-600">
             <LogOut className="h-4 w-4 mr-2" /> Sign out
@@ -103,7 +103,7 @@ function Dashboard() {
                 <div key={g.id} className="border border-slate-200 rounded-md p-3">
                   <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0">
-                      <div className="text-xs uppercase font-medium text-blue-700">{labelFor(g.kind as Kind)}</div>
+                      <div className="text-xs uppercase font-medium text-rainbow">{labelFor(g.kind as Kind)}</div>
                       <div className="font-medium truncate text-slate-900">{g.title}</div>
                       <div className="text-xs text-slate-500">{new Date(g.created_at).toLocaleString()}</div>
                     </div>
@@ -231,7 +231,7 @@ function EmailTool() {
               placeholder="- Launch slipped 1 week due to QA findings&#10;- New target: Oct 12&#10;- Ask for sign-off on revised timeline"
             />
           </div>
-          <Button type="submit" disabled={mut.isPending} className="bg-blue-700 hover:bg-blue-800 text-white w-fit">
+          <Button type="submit" disabled={mut.isPending} className="bg-rainbow text-white shadow-md hover:opacity-90 transition w-fit">
             {mut.isPending && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
             Generate email
           </Button>
@@ -271,7 +271,7 @@ function MeetingTool() {
             <Label htmlFor="m-notes">Raw notes or transcript</Label>
             <Textarea id="m-notes" value={notes} onChange={(e) => setNotes(e.target.value)} rows={10} placeholder="Paste your meeting notes here..." />
           </div>
-          <Button type="submit" disabled={mut.isPending} className="bg-blue-700 hover:bg-blue-800 text-white w-fit">
+          <Button type="submit" disabled={mut.isPending} className="bg-rainbow text-white shadow-md hover:opacity-90 transition w-fit">
             {mut.isPending && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
             Summarize
           </Button>
@@ -329,7 +329,7 @@ function PlannerTool() {
             <Label htmlFor="tasks">Tasks & goals</Label>
             <Textarea id="tasks" value={tasks} onChange={(e) => setTasks(e.target.value)} rows={8} placeholder="- Finish Q3 report (due Fri)&#10;- Prep for 1:1 with manager&#10;- Review 3 PRs&#10;- Inbox cleanup" />
           </div>
-          <Button type="submit" disabled={mut.isPending} className="bg-blue-700 hover:bg-blue-800 text-white w-fit">
+          <Button type="submit" disabled={mut.isPending} className="bg-rainbow text-white shadow-md hover:opacity-90 transition w-fit">
             {mut.isPending && <Loader2 className="h-4 w-4 mr-2 animate-spin" />}
             Build my plan
           </Button>

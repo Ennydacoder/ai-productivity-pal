@@ -10,7 +10,7 @@ import { toast } from "sonner";
 import { Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/auth")({
-  head: () => ({ meta: [{ title: "Sign in — Productivity Assistant" }] }),
+  head: () => ({ meta: [{ title: "Sign in — KenWork AI" }] }),
   component: AuthPage,
 });
 
@@ -64,12 +64,12 @@ function AuthPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col">
+    <div className="min-h-screen bg-rainbow-bg flex flex-col">
       <header className="border-b border-slate-200 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <Link to="/" className="flex items-center gap-2 text-slate-900 font-semibold">
-            <Sparkles className="h-5 w-5 text-blue-700" />
-            Productivity Assistant
+            <Sparkles className="h-5 w-5 text-rainbow" />
+            KenWork AI
           </Link>
         </div>
       </header>
@@ -124,7 +124,7 @@ function AuthPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-700 hover:bg-blue-800 text-white"
+                className="w-full bg-rainbow text-white shadow-md hover:opacity-90 transition"
               >
                 {loading ? "Please wait…" : mode === "signin" ? "Sign in" : "Create account"}
               </Button>
