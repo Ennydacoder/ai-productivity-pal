@@ -55,7 +55,7 @@ export const generateAi = createServerFn({ method: "POST" })
     if (!key) throw new Error("AI service is not configured.");
 
     const gateway = createLovableAiGatewayProvider(key);
-    const model = gateway("google/gemini-3-flash-preview");
+    const model = gateway("google/gemini-2.5-flash");
 
     const { text } = await generateText({
       model,
